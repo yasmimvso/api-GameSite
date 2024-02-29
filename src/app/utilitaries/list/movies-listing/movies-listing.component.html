@@ -1,0 +1,63 @@
+
+<div class="filter">
+  <div class="filter-alert">
+    <a (click)="checkFilter()" style="height: 100%; width: 100%;">
+      <i class="material-icons" style="font-size: 2rem;">
+        filter_list
+      </i>
+    </a>
+  </div>
+    <!--Platfrom Select -->
+    <mat-form-field style="margin-right: 1%;">
+      <mat-label>Platform</mat-label>
+      <mat-select #platformSelect>
+          <mat-option *ngFor="let platform of platforms" [value]="platform">{{platform}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+   <!--desenvolvedora-->
+    <mat-form-field style="margin-right: 1%;">
+      <mat-label>Developer</mat-label>
+      <mat-select #developerSelect>
+          <mat-option *ngFor="let dev of develop" [value]="dev">{{dev}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!--categoria-->
+    <mat-form-field style="margin-right: 1%; width: 20%;">
+      <mat-label>Genre</mat-label>
+      <mat-select #genreSelect  style="font-size: 1.3rem;">
+          <mat-option *ngFor="let genre of genres" [value]="genre">{{genre}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <!--Ano de lançamento (release_date)-->
+    <mat-form-field style="margin-right: 1%; width: 20%;">
+      <mat-label>Date</mat-label>
+      <mat-select #dateSelect  style="font-size: 1.3rem;">
+          <mat-option *ngFor="let date of dates" [value]="date">{{date}}</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+</div>
+<div style="display: flex; flex-direction: column;">
+  <div style="height: 10%; width: 100%; float: inline-start; font-size: 1.5rem; color: white; margin: 2% 0 2% 0;">My List</div>
+  <app-movies-fav></app-movies-fav>
+</div>
+
+<div class="background-canva">
+  <div style="height: 10%; width: 100%; float: inline-start; font-size: 1.5rem; color: white; margin: 2% 0 2% 0;">New Games</div>
+  <div class="movie-list">
+    <ul>
+      <li *ngFor="let movie of movies">
+        <app-movie-card [movies]="movie"></app-movie-card>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!--
+  everá existir, na listagem de jogos, uma forma de ordenar os jogos
+  pelos seguintes parâmetros: data de lançamento, popularidade [id], nome
+  (ordem alfabética)[TITLE].
+-->

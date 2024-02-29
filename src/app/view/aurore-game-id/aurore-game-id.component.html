@@ -1,0 +1,60 @@
+<!--<app-header-aurore style="mar"></app-header-aurore>-->
+<div class="idContent">
+  <div class="infoCard">
+    <div class="section-1">
+      <div style="display: flex; flex-direction: row; justify-content:space-between;">
+        <h3>{{movieData.title}}</h3>
+        <a class="favorite"  (click)="toggleFav()">
+          <i class="material-icons">
+            {{isFav? 'favorite': 'favorite_border'}}
+          </i>
+        </a>
+      </div>
+      <div class="tst">
+        <p class="tst-title">Developer:</p>
+        <p class="tst-result" style="color: rgb(164, 142, 255);">{{movieData.developer}}</p>
+      </div>
+
+      <div class="tst">
+        <p class="tst-title">Release Year:</p>
+        <p class="tst-result">{{movieData.release_date.split('-')[0]}}</p>
+      </div>
+
+      <div class="tst">
+        <p class="tst-title">Plataform:</p>
+        <p class="tst-result">{{movieData.platform}}</p>
+      </div>
+
+      <div class="tst">
+        <p class="tst-title">Genre:</p>
+        <p class="tst-result">{{movieData.genre}}</p>
+      </div>
+
+      <hr />
+
+      <div class="botton-link">
+          <a href={{movieData.freetogame_profile_url}} target="_blank" class="link">
+            <button>Freetogame</button>
+          </a>
+
+          <a href={{movieData.game_url}} target="_blank" class="link">
+            <button>Game</button>
+          </a>
+
+      </div>
+    </div>
+    <div class="section-2">
+      <img  src={{movieData.thumbnail}} alt="thumbnail">
+      <div style=" height: 45%;   background-color: rgba(33, 34, 51, 0.9); backdrop-filter: blur(7px)">
+        <h3>Description</h3>
+        <p class="description">{{movieData.short_description}}</p>
+      </div>
+    </div>
+  </div>
+  <a class="button-home"  [routerLink]="['/']">
+    <i class="material-icons">
+      keyboard_return
+    </i>
+    Back Home
+  </a>
+</div>
