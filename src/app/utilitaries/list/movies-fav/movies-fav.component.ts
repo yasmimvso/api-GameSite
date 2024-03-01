@@ -9,7 +9,7 @@ import { FirebaseGamesService } from '../../../services/firebase-games/firebase-
 export class MoviesFavComponent implements OnInit {
   @ViewChild('movieList') movieListRef!: ElementRef;
 
-  scrollAmount = 200;
+  scrollAmount = 300;
 
   listMovies: any;
 

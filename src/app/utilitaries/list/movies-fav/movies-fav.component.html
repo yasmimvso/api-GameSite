@@ -1,11 +1,15 @@
-<div class="movie-carousel">
-  <div class="movie-list" #movieList>
-    <ul>
-      <li *ngFor="let movie of listMovies">
-        <app-movie-card [movies]="movie"></app-movie-card>
-      </li>
-    </ul>
+<div style="display: flex; flex-direction: row; height: 40%; position: relative;">
+  <div class="movie-carousel" #movieList>
+    <div class="movie-list">
+      <ul>
+        <li *ngFor="let movie of listMovies">
+          <app-movie-card [movies]="movie"></app-movie-card>
+        </li>
+      </ul>
+    </div>
   </div>
+
   <button class="scroll-left" (click)="scrollLeft()">◄</button>
   <button class="scroll-right" (click)="scrollRight()">►</button>
 </div>
+

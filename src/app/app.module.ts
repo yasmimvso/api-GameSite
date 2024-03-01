@@ -24,7 +24,6 @@ import { environment } from '../environments/environment';
 import { MoviesFavComponent } from './utilitaries/list/movies-fav/movies-fav.component';
 
 
-
 @NgModule({
   declarations: [
     AppComponent,

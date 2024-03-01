@@ -1,11 +1,6 @@
 .header{
-  /*border-top: 2% solid pink;
-  width: 100%;
-  height: 10%;
-  background-color: #ccc;
-  position:fixed;*/
+
     z-index: 11;
-    border: 2% solid pink;
     width: 100%;
     height: 60px;
     position: fixed;
@@ -16,4 +11,22 @@
 
 }
 
+.flex-row{
+  width: 10%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+
+.flex-row:hover{
+  transform: scale(1.1);
+  box-shadow: 0 0 7px rgb(104, 66, 255);
+  animation: pulse 1s infinite;
+  cursor: pointer;
+}
+
+p{
+  font-size: 1.4rem;
+}
 
